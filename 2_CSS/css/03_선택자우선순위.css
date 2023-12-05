@@ -1,0 +1,21 @@
+h1 {
+  background: pink;
+  color: yellow;
+}
+h1 {
+  background: skyblue;
+}
+/* !important > style > id(#) > 클래스(.) > 태그 (큰 순서)*/
+#id1 {
+  background: pink;
+}
+.class1 {
+  background: yellowgreen;
+  color: red;
+}
+div {
+  background: teal !important;
+  color: white;
+  width: 200px;
+  height: 200px;
+}
