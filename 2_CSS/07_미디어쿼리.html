@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미디어 쿼리</title>
+    <link rel="stylesheet" href="./css/07_미디어쿼리.css" />
+  </head>
+  <body>
+    <h2>레이아웃 1 : inline-block</h2>
+    <div class="container" id="con-1">
+      <!-- (section.item.item-style-1.item-inline-block)*2 -->
+      <section class="item item-style-1 item-inline-block">
+        <h3>Section1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+          numquam qui. Sunt laudantium nam dolorem consectetur, magnam dolorum
+          maxime iusto reiciendis amet cum obcaecati possimus a veniam quasi
+          aperiam? Totam.
+        </p>
+      </section>
+      <section class="item item-style-2 item-inline-block">
+        <h3>Section2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          repellendus eligendi expedita earum rem nobis et illo aliquid, qui,
+          exercitationem veritatis, perspiciatis modi quo! Quibusdam dicta
+          molestiae obcaecati explicabo aperiam!
+        </p>
+      </section>
+    </div>
+    <footer>footer</footer>
+
+    <h2>레이아웃 2 : float</h2>
+    <div class="container" id="con-2">
+      <!-- (section.item.item-style-1.item-inline-block)*2 -->
+      <section class="item item-style-1 item-float">
+        <h3>Section1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+          numquam qui. Sunt laudantium nam dolorem consectetur, magnam dolorum
+          maxime iusto reiciendis amet cum obcaecati possimus a veniam quasi
+          aperiam? Totam.
+        </p>
+      </section>
+      <section class="item item-style-2 item-float">
+        <h3>Section2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          repellendus eligendi expedita earum rem nobis et illo aliquid, qui,
+          exercitationem veritatis, perspiciatis modi quo! Quibusdam dicta
+          molestiae obcaecati explicabo aperiam!
+        </p>
+      </section>
+      <!-- <div style="clear: both;"></div> -->
+    </div>
+    <footer>footer</footer>
+
+    <h2>레이아웃 3 : 반응형 웹 - mediaquery</h2>
+    <div class="container" id="con-3">
+      <section class="item item-style-1 item-mediaquery">
+        <h3>Section1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+          numquam qui. Sunt laudantium nam dolorem consectetur, magnam dolorum
+          maxime iusto reiciendis amet cum obcaecati possimus a veniam quasi
+          aperiam? Totam.
+        </p>
+      </section>
+      <section class="item item-style-2 item-mediaquery">
+        <h3>Section2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          repellendus eligendi expedita earum rem nobis et illo aliquid, qui,
+          exercitationem veritatis, perspiciatis modi quo! Quibusdam dicta
+          molestiae obcaecati explicabo aperiam!
+        </p>
+      </section>
+    </div>
+    <footer>footer</footer>
+  </body>
+</html>

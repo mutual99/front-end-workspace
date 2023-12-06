@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; 사이즈가 350이면 350으로 고정 */
+}
+body {
+  background-color: salmon;
+  background: linear-gradient(purple, pink);
+  height: 100vh;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  background-color: white;
+}
+#outer {
+  /* background-color: white; */
+  border: 3px solid white;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  top: 50px;
+  margin: 50px auto;
+  border-radius: 10px;
+  /* text-align: center; */
+}
+#pubao {
+  width: 200px;
+  height: 200px;
+  margin-left: 150px;
+  margin-top: 30px;
+  border-radius: 200px;
+  /* object-fit: cover; */
+}
+h2 {
+  /* font-size: 1.5rem; */
+  margin-top: 5px;
+  margin-left: 200px;
+  color: gray;
+}
+#GitHub {
+  position: absolute;
+  display: block;
+  bottom: 120px;
+  left: 25px;
+  width: 90%;
+  height: 70px;
+  /* background-color: lightsalmon; */
+  border: 3px solid white;
+  text-align: center; /* #outer에서 text-align: center;를 했으면 삭제 가능 */
+  line-height: 70px;
+  font-size: 20px;
+  /* 
+  padding 10px;
+  maring: 15px 0;
+  */
+}
+#InstaGram {
+  position: absolute;
+  display: block;
+  bottom: 30px;
+  left: 25px;
+  width: 90%;
+  height: 70px;
+  /* background-color: lightsalmon; */
+  border: 3px solid white;
+  text-align: center; /* #outer에서 text-align: center;를 했으면 삭제 가능 */
+  line-height: 70px;
+  font-size: 20px;
+}
