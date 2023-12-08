@@ -25,6 +25,15 @@
 
   /* 5. grid-auto-rows */
   grid-auto-rows: minmax(200px, auto);
+
+  /*  6. justufy-items, align-items */
+  /* justify-items: start;
+  justify-items: center;
+  justify-items: end;
+
+  align-items: start;
+  align-items: center;
+  align-items: end; */
 }
 .item {
   background-color: white;
@@ -35,6 +44,10 @@
 .item:nth-child(2) {
   grid-row: 2/4;
   grid-column: 1/3;
+}
+.item:nth-child(6) {
+  justify-self: center;
+  align-self: center;
 }
 .item img {
   height: 95px;
