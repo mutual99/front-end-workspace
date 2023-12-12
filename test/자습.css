@@ -18,4 +18,10 @@ h1 {
 .container {
   background-color: greenyellow;
   display: flex;
+  justify-content: flex-end;
+}
+.contants {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: flex-end;
 }
