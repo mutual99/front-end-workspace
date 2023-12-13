@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>객체(object)</h1>
+
+    <!-- 객체 생성 -->
+    <script>
+      const person = {};
+      const person2 = new Object(); // 거의 안 씀!
+
+      console.log(person);
+      console.log(person2);
+
+      // 변수 : 속성, 특징들 추가
+      person.name = "이상호";
+      person.age = 9;
+
+      //   함수 : 기능들 추가
+      person.hello = function () {
+        console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살`);
+      };
+
+      console.log(person);
+      console.log(person.age); // person의 age 값
+      person.hello();
+
+      const person3 = {
+        name: "이상호",
+        age: 25,
+        hello: function () {
+          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살`);
+        },
+      };
+
+      person3.hello();
+      // 객체 속 키 삭제
+      delete person3.hello;
+
+      console.log(person3); // hello 삭제됨
+      //   person3.hello();
+
+      /*
+        const 변수 = {
+          키: 값,
+          카: 값,
+          키: 값,
+          ...
+        }
+        // 객체에 추가 & 수정
+          변수.키 = 값
+        
+        // 데이터에 접근
+            변수.키;    <-- 속성인 경우
+            변수.키();  <-- 함수인 경우
+      */
+
+      // window 객체의 alert 함수!
+      //   window.alert("경고!");
+      //   console.log(window);
+    </script>
+
+    <!-- 
+        틀1 : 생성자(constructor) 함수
+    -->
+    <script>
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hello = function () {
+          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살`);
+        };
+      }
+      const p1 = new Person("이상호", 13);
+      console.log(p1);
+      p1.hello();
+
+      // walk 라는 기능을 중에 추가!
+      Person.prototype.walk = function () {
+        console.log("가볍게 산책 중~");
+      };
+
+      const p2 = new Person("이상호", 15);
+      console.log(p2);
+      p2.hello();
+    </script>
+
+    <!-- 
+        틀2 : 클래스 
+    -->
+    <script>
+      class Person2 {
+        // 생성자 -> 객체 생성하는 순간 호출!
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        hello() {
+          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살`);
+        }
+      }
+      const p3 = new Person2("이상호", 18);
+      //   console.log(p3);
+      p3.hello();
+    </script>
+  </body>
+</html>
