@@ -32,15 +32,11 @@
              원의 넓이 = 반지름 * 반지름 * 3.14;
     -->
     <script>
-      //           const minus2 = (a, b) => {
-      //     return a - b;
-      //   };
-      //   console.log(minus2(100, 30)); // 70
-      const round = (a) => {
-        return 2 * a * 3.14;
+      const round = (r) => {
+        return 2 * r * 3.14;
       };
-      const area = (a) => {
-        return a * a * 3.14;
+      const area = (r) => {
+        return r * r * 3.14;
       };
       console.log(round(2)); // 12.56
       console.log(area(3)); // 28.26
@@ -48,12 +44,12 @@
     ​
     <!-- Q4. 시작 수(n1)과 끝 수(n2)가 주어졌을 때 n1 ~ n2의 합계를 구하는 함수를 만들어 주세요 -->
     <script>
-      function sum(a, b) {
-        let sum1 = 0;
-        for (let i = a; i <= b; i++) {
-          sum1 += i;
+      function sum(n1, n2) {
+        let total = 0;
+        for (let i = n1; i <= n2; i++) {
+          total += i;
         }
-        return sum1;
+        return total;
       }
       console.log(sum(10, 20)); // 165
       console.log(sum(100, 200)); // 15150
@@ -66,19 +62,54 @@
                구매가가 100000원 이상 : 10%
     -->
     <script>
-      function calculate(a) {
-        if (a >= 100000) {
-          return a * 0.9;
-        } else if (a >= 50000) {
-          return a * 0.925;
-        } else if (a >= 10000) {
-          return a * 0.95;
-        } else {
-          return a;
+      function calculate(price) {
+        // if (price >= 100000) {
+        //   // 10만원 이상
+        //   return price * 0.9;
+        // } else if (price >= 50000) {
+        //   // 5만원 이상 10만원 미만
+        //   return price * 0.925;
+        // } else if (price >= 10000) {
+        //   // 1만원 이상 5만원 미만
+        //   return price * 0.95;
+        // } else {
+        //   // 1만원 미만
+        //   return price;
+        // }
+        // let rate = 0;
+        let rate = 1;
+        if (price >= 100000) {
+          // rate = 10;
+          rate = 0.9;
+        } else if (price >= 50000) {
+          // rate = 7.5;
+          rate = 0.925;
+        } else if (price >= 10000) {
+          // rate = 5;
+          rate = 0.95;
         }
+        // return price * ((100 - rate) / 100);
+        return price * rate;
       }
       console.log(calculate(20000)); // 19000
       console.log(calculate(65000)); // 60125
+    </script>
+    <!--
+      console.log("합계")
+      console.log("합계", 12)
+      console.log("합계", 12, "평균")
+    -->
+
+    <!-- 가변 매개변수(파라미터) : 쓰진 않음!-->
+    <script>
+      function sum(...args) {
+        // console.log("sum!");
+        console.log(args);
+      }
+      sum(10, 20);
+      sum(10, 20, 30);
+      sum(10, 20, 30, 40);
+      sum(10, 20, 30, 40, 50);
     </script>
   </body>
 </html>

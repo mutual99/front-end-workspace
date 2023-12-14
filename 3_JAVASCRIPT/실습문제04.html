@@ -192,25 +192,35 @@
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
     <script>
       console.log("Q10 -------");
-      let score1 = 0;
-      let score2 = 0;
-      let score3 = 0;
-      let score4 = 0;
-      let scores = [
+      // let score1 = 0;
+      // let score2 = 0;
+      // let score3 = 0;
+      // let score4 = 0;
+      const scores = [
         [83, 90, 70, 87],
         [87, 93, 62, 83],
         [98, 90, 77, 97],
       ];
+      // for (let i = 0; i < scores.length; i++) {
+      //   score1 = scores[i][0];
+      //   score2 = scores[i][1];
+      //   score3 = scores[i][2];
+      //   score4 = scores[i][3];
+      //   total = score1 + score2 + score3 + score4;
+      //   avg = total / 4;
+      //   console.log(
+      //     "점수의 합계는 " + total + "이고 평균은 " + avg + "입니다."
+      //   );
+      // }
+      let total = 0;
       for (let i = 0; i < scores.length; i++) {
-        score1 = scores[i][0];
-        score2 = scores[i][1];
-        score3 = scores[i][2];
-        score4 = scores[i][3];
-        total = score1 + score2 + score3 + score4;
-        avg = total / 4;
-        console.log(
-          "점수의 합계는 " + total + "이고 평균은 " + avg + "입니다."
-        );
+        for (let j = 0; j < scores[i].length; j++) {
+          // console.log(scores[i][j]);
+          total += scores[i][j];
+        }
+        console.log(`합계 : ${total} 평균 : ${total / scores[i].length}`);
+        console.log(scores[i]);
+        total = 0;
       }
     </script>
   </body>
